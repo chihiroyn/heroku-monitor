@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 
 from shoppingSite import ShoppingSite
 
+import pyautogui
+
 browser = webdriver.Chrome()
 DEFAULT_WAIT = 3
 
@@ -38,6 +40,9 @@ class HerokuAdmin(ShoppingSite):
 
 def main():
     herokuAdmin = HerokuAdmin()
+
+    sleep(5)
+    print(pyautogui.locateCenterOnScreen('success_icon.png'))
 
 if (__name__ == "__main__"):
     main()
